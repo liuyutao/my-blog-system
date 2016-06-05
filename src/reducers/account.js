@@ -1,12 +1,16 @@
 /**
  * Created by user on 16/6/4.
  */
-function accountReducer(state, action) {
+import * as types from '../constants/actionTypes'
+
+function accountReducer(state = {}, action) {
   switch (action.type) {
-    case 'login':
+    case types.ACCOUNT_LOGIN:
       return Object.assign({}, state, action.account);
-    case 'logout':
+    case types.ACCOUNT_LOGOUT:
       return Object.assign({}, state, action.account);
+    default:
+      return state;
   }
 }
 

@@ -23,21 +23,15 @@ const history = syncHistoryWithStore(hashHistory, store);
 
 let AppRouter = (
   <Provider store={store}>
-    <Router history={history}>
+    <Router history={hashHistory}>
       <Route path="/" component={AppComponent}>
-        <Route path="blog" component={ArticleListComponent}>
-          <IndexRedirect to="/blog/list/1/"/>
-          <Route path="add" component={ArticleAddComponent}/>
-          <Route path="edit" component={ArticleEditComponent}>
-
-          </Route>
-          <Route path="list" component={ArticleListComponent}>
-            <Route path=":page" component={ArticleListComponent}>
-            </Route>
-          </Route>
+        <Route path="add" component={ArticleAddComponent}/>
+        <Route path="edit" component={ArticleEditComponent}>
         </Route>
-        <Route path="signin" component={SignInComponent}/>
+        <Route path=":page" component={ArticleListComponent}>
+        </Route>
       </Route>
+      <Route path="signin" component={SignInComponent}/>
     </Router>
   </Provider>
 );

@@ -4,11 +4,18 @@ import React from 'react';
 
 require('styles//ArticleList.css');
 
+
 class ArticleListComponent extends React.Component {
+  constructor(props) {
+    super(props);
+
+  }
+
+
   render() {
     return (
       <div className="articlelist-component">
-        Please edit src/components///ArticleListComponent.js to update this component!
+
       </div>
     );
   }
