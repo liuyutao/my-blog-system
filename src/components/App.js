@@ -8,13 +8,13 @@ import React from 'react';
 class AppComponent extends React.Component {
   constructor() {
     super();
-
+    this.state = {isLogin:false}
   }
 
   render() {
     return (
       <div className="index">
-
+        App
       </div>
     );
   }
